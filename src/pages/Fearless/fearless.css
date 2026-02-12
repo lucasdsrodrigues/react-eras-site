@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;700&display=swap');
+
+.f-era-container {
+  background: linear-gradient(to bottom, #fff9e6, #f8e58c);
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  color: #5c430d;
+  overflow-x: hidden;
+}
+
+.f-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 5%;
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 2px solid #d4af37;
+}
+
+.f-nav a { text-decoration: none; color: #d4af37; font-weight: bold; font-size: 0.8rem; }
+.f-badge { font-weight: 900; letter-spacing: 2px; color: #5c430d; }
+
+/* Hero centralizado e limpo */
+.f-hero {
+  padding: 60px 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.f-hero-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.f-album-img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border: 10px solid white;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  transform: rotate(-2deg);
+}
+
+.f-main-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 6rem;
+  color: #d4af37;
+  margin: 0;
+}
+
+.f-quote { font-style: italic; margin-bottom: 20px; opacity: 0.8; }
+
+.f-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  font-size: 0.9rem;
+}
+
+.f-specs span { font-weight: bold; color: #d4af37; display: block; }
+
+.f-tv-btn {
+  margin-top: 25px;
+  background: transparent;
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.f-tv-btn:hover { background: #d4af37; color: white; }
+
+/* Barra de Stats */
+.f-stats-strip {
+  background: #d4af37;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  text-align: center;
+}
+
+.f-stats-strip strong { display: block; font-size: 2rem; }
+
+/* Videos sem quebrar */
+.f-videos-section { padding: 60px 5%; text-align: center; }
+.f-section-title { font-family: 'Great Vibes', cursive; font-size: 3rem; color: #d4af37; }
+
+.f-video-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.f-video-item {
+  width: 280px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.f-video-thumb {
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+  border: 5px solid white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-play { font-size: 2rem; color: white; opacity: 0; transition: 0.3s; }
+.f-video-item:hover .f-play { opacity: 1; }
+
+.f-glitter {
+  position: fixed;
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 100;
+}

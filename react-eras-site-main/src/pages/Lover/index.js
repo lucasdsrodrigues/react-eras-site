@@ -48,22 +48,22 @@ const Lover = () => {
     // Petal falling animation
     useEffect(() => {
         if (!loaded) return;
-        
+
         const createPetal = () => {
             const petal = document.createElement('div');
             petal.classList.add('lover-petal');
-            
+
             // Random properties
             const size = Math.random() * 15 + 10;
             const left = Math.random() * 100;
             const duration = Math.random() * 5 + 6;
             const delay = Math.random() * 5;
             const opacity = Math.random() * 0.4 + 0.3;
-            
+
             // Colors from Lover palette
             const colors = ['#ff9ec4', '#ffd1dc', '#b8d4e3', '#fff5f7'];
             const color = colors[Math.floor(Math.random() * colors.length)];
-            
+
             petal.style.width = `${size}px`;
             petal.style.height = `${size * 0.8}px`;
             petal.style.left = `${left}vw`;
@@ -72,24 +72,24 @@ const Lover = () => {
             petal.style.opacity = opacity;
             petal.style.animationDuration = `${duration}s`;
             petal.style.animationDelay = `${delay}s`;
-            
+
             document.querySelector('.lover-hero')?.appendChild(petal);
-            
+
             setTimeout(() => {
                 if (petal && petal.parentNode) {
                     petal.parentNode.removeChild(petal);
                 }
             }, (duration + delay) * 1000);
         };
-        
+
         // Create initial batch
         for (let i = 0; i < 20; i++) {
             createPetal();
         }
-        
+
         // Continue creating petals
         const interval = setInterval(createPetal, 400);
-        
+
         return () => clearInterval(interval);
     }, [loaded]);
 
